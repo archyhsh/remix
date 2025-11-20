@@ -7,6 +7,10 @@ def index():
     return(render_template("index.html"))
 
 @app.route("/main",methods=["GET", "POST"])
+def paynow():
+    return(render_template("paynow.html"))
+
+@app.route("/paynow",methods=["GET", "POST"])
 def main():
     q = request.form.get("q")
     print(q)
